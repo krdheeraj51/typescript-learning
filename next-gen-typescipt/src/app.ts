@@ -2,9 +2,9 @@
 
 const userName='Dheeraj';
 // userName="manish"
-let age=29;
+// let age=29;
 
-age=30;
+// age=30;
 
 // function add(a:number,b:number){
 // let result;
@@ -34,7 +34,7 @@ const activeHobbies=['Hiking'];
 activeHobbies.push(...hobbies)
 
 const person={
-    name:"Dheeraj",
+    fisrtName:"Dheeraj",
     age:28
 }
 
@@ -44,5 +44,28 @@ console.log(anotherObj)
 
 //Rest Parameters...
 
-co
+const add = (...numbers:number[])=>{
+return numbers.reduce((currentResult,currentvalues)=>{
+    return currentResult+ currentvalues;
+})
+
+}
+
+const addNumbers= add(2,3,4,5,6,7);
+
+console.log(addNumbers);
+//Array distructuring 
+const [hobbie1,hobbie2,...remainingHobbies]=hobbies;
+
+console.log(hobbie1)
+console.log(hobbie2)
+console.log(remainingHobbies)
+
+// Object distructuring
+
+let {fisrtName,age}=person;
+
+console.log("fisrtName ::",fisrtName);
+
+console.log("age ::",age);
 
